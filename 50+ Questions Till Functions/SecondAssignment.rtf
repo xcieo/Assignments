@@ -1,0 +1,489 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil Consolas;}{\f3\fnil\fcharset0 Arial;}{\f4\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red0\green0\blue255;\red43\green145\blue175;\red163\green21\blue21;\red0\green128\blue0;\red255\green0\blue0;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\sa200\sl276\slmult1\qc\lang9\ul\f0\fs56 Assignment \par
+By: Feza Roheel\par
+\pard\ulnone\f1\fs24 Q1 ) Amend the grade program to that an error message is displayed if the grade is greater than\par
+\pard\sa200\sl276\slmult1 100 or less than 0.\par
+\f0\fs20  \cf1\fs24 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  marks \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  grade \cf1 As\cf0  \cf1 String\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Enter your marks out of 100 "\cf0 )\par
+        marks = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  marks\par
+            \cf1 Case\cf0  90 \cf1 To\cf0  100\par
+                grade = \cf3 " A"\cf0\par
+            \cf1 Case\cf0  80 \cf1 To\cf0  90\par
+                grade = \cf3 " B"\cf0\par
+            \cf1 Case\cf0  70 \cf1 To\cf0  80\par
+                grade = \cf3 "C"\cf0\par
+            \cf1 Case\cf0  60 \cf1 To\cf0  70\par
+                grade = \cf3 "D"\cf0\par
+            \cf1 Case\cf0  50 \cf1 To\cf0  60\par
+                grade = \cf3 "E"\cf0\par
+            \cf1 Case\cf0  0 \cf1 To\cf0  50\par
+                grade = \cf3 "U"\cf0\par
+            \cf1 Case Else\cf0\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "Sorry please enter valid marks between 0 and 100 only "\cf0 )\par
+                grade = \cf3 " grade cannot be calculated "\cf0\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Your grade is : "\cf0  & grade)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\cf0\f2\par
+\pard\f1 Q2) Write a program that will ask for a person\rquote s age and then display a message whether they\par
+\pard\sa200\sl276\slmult1 are old enough to drive or not.\par
+\f0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  age \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter your age "\cf0 )\par
+        age = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 If\cf0  (age > 30) \cf1 And\cf0  (age < 100) \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 " You can drive, you are old enough ! . You are eligible. "\cf0 )\par
+        \cf1 Else\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "sorry you cannot drive !. "\cf0 )\par
+        \cf1 End\cf0  \cf1 If\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0\f1 Q3)Write a program that asks the user to enter two numbers and then displays the largest of\par
+\pard\sa200\sl276\slmult1 the two numbers\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num1 \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  num2 \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  largest \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Enter two numbers"\cf0 )\par
+        num1 = \cf2 Console\cf0 .ReadLine()\par
+        num2 = \cf2 Console\cf0 .ReadLine()\par
+        largest = \cf2 Math\cf0 .Max(num1, num2) \cf4 '\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "The largest number is "\cf0  & largest)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\fs19\par
+\pard\cf0\f1\fs24 Q4)Write a program that checks whether a number input is within the range 21 to 29 inclusive\par
+and then displays an appropriate massage.\par
+Extend the program so a message out of range will cause a message saying whether it is\par
+\pard\sa200\sl276\slmult1 above or below the range\cf1\f2\par
+\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter a number"\cf0 )\par
+        number = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 If\cf0  (number >= 21) \cf1 And\cf0  (number <= 29) \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 " Your number is between the range 21 and 29 "\cf0 )\par
+        \cf1 ElseIf\cf0  number < 21 \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 " Your number is below the range "\cf0 )\par
+        \cf1 Else\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "Your number is above the range"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f1\fs24 Q5)Write a program that asks for three numbers and then displays the largest of the three\par
+\pard\sa200\sl276\slmult1 numbers entered\par
+\f0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number1, number2, number3 \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  largest \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter 3 numbers "\cf0 )\par
+        number1 = \cf2 Console\cf0 .ReadLine()\par
+        number2 = \cf2 Console\cf0 .ReadLine()\par
+        number3 = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 If\cf0  number1 > number2 \cf1 And\cf0  number1 > number3 \cf1 Then\cf0\par
+            largest = number1\par
+        \cf1 ElseIf\cf0  number2 > number3 \cf1 Then\cf0\par
+            largest = number2\par
+        \cf1 Else\cf0\par
+            largest = number3\par
+        \cf1 End\cf0  \cf1 If\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "The largest number is "\cf0  & largest)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f1\fs24 Q6)Write a program that lets the user enter a number between 1 and 12 and displays the\par
+\pard\sa200\sl276\slmult1 month name for that month number. The input 3 would therefore display March\fs20 .\f2\fs24\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  month \cf1 As\cf0  \cf1 String\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "please enter a number between 1 and 12"\cf0 )\par
+        number = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  number\par
+            \cf1 Case\cf0  1\par
+                month = \cf3 "January"\cf0\par
+            \cf1 Case\cf0  2\par
+                month = \cf3 "feburary"\cf0\par
+            \cf1 Case\cf0  3\par
+                month = \cf3 "March"\cf0\par
+            \cf1 Case\cf0  4\par
+                month = \cf3 "April"\cf0\par
+            \cf1 Case\cf0  5\par
+                month = \cf3 "May"\cf0\par
+            \cf1 Case\cf0  6\par
+                month = \cf3 "June"\cf0\par
+            \cf1 Case\cf0  7\par
+                month = \cf3 "july"\cf0\par
+            \cf1 Case\cf0  8\par
+                month = \cf3 "August"\cf0\par
+            \cf1 Case\cf0  9\par
+                month = \cf3 "september"\cf0\par
+            \cf1 Case\cf0  10\par
+                month = \cf3 "october"\cf0\par
+            \cf1 Case\cf0  11\par
+                month = \cf3 "November"\cf0\par
+            \cf1 Case\cf0  12\par
+                month = \cf3 "December"\cf0\par
+            \cf1 Case Else\cf0\par
+                month = \cf3 "please try again . Type a number between 1 and 12"\cf0\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 " The month is :"\cf0  & month)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f0\fs24 Q7)\f1 Write a program that reads in the temperature of water in a container (in Centigrade)\par
+\pard\sa200\sl276\slmult1 and displays a message stating whether the water is frozen, boiling or neither.\par
+\f0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  temp \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Enter the temperature of water in celsius"\cf0 )\par
+        temp = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 If\cf0  temp >= 100 \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "The water is boiling"\cf0 )\par
+        \cf1 ElseIf\cf0  temp <= 0 \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "The water is frozen"\cf0 )\par
+        \cf1 Else\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "The water has a normal temperature"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0\f1 Q8)Write a program that asks the user for the number of hours worked this week and their\par
+hourly rate of pay. The program is to calculate the gross pay. If the number of hours\par
+worked is greater than 40, the extra hours are paid at 1.5 times the rate. The program\par
+\pard\sa200\sl276\slmult1 should display an error message if the number of hours worked is not in the range 0 to 60.\cf1\f0\par
+Sub\cf0  Main()\par
+        \cf1 Dim\cf0  hours \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  rate, TotalPay \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 " Enter the number of hours you worked between 0 to 60"\cf0 )\par
+        hours = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 If\cf0  (hours >= 0) \cf1 And\cf0  (hours <= 60) \cf1 Then\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "Enter the hourly rate of pay"\cf0 )\par
+            rate = \cf2 Console\cf0 .ReadLine()\par
+            \cf1 If\cf0  hours <= 40 \cf1 Then\cf0\par
+                TotalPay = hours * rate\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "Your total pay is "\cf0  & TotalPay)\par
+            \cf1 Else\cf0\par
+                TotalPay = (40 * rate) + ((rate * 1.5) * (hours - 40))\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "Your total pay is "\cf0  & TotalPay)\par
+            \cf1 End\cf0  \cf1 If\cf0\par
+        \cf1 Else\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "Please enter the number of hours between 0 to 60"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\par
+\pard\cf0\f1 Q9)Write a program that accepts a date as three separate integers such as 12 5 03. The\par
+program should display the date in the form 12th May 2003.\par
+Adapt your program to interpret a date such as 12 5 95 as 12th May 1995. Your program\par
+\pard\sa200\sl276\slmult1 should interpret the year to be in the range 1931 to 2030.\cf1\f0\par
+\cf0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  _day, _month, _year \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  Ans1 \cf1 As\cf0  \cf1 String\cf0\par
+        \cf1 Dim\cf0  Ans2 \cf1 As\cf0  \cf1 String\cf0\par
+        \cf1 Dim\cf0  Ans3 \cf1 As\cf0  \cf1 String\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter the date"\cf0 )\par
+        _day = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  _day\par
+            \cf1 Case\cf0  1, 21, 31\par
+                Ans1 = _day & \cf3 "st"\cf0\par
+            \cf1 Case\cf0  2, 22\par
+                Ans1 = _day & \cf3 "nd"\cf0\par
+            \cf1 Case\cf0  3, 23\par
+                Ans1 = _day & \cf3 "rd"\cf0\par
+            \cf1 Case Else\cf0\par
+                Ans1 = _day & \cf3 "th"\cf0\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Please enter the month"\cf0 )\par
+        _month = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  _month\par
+            \cf1 Case\cf0  1\par
+                Ans2 = \cf3 "January"\cf0\par
+            \cf1 Case\cf0  2\par
+                Ans2 = \cf3 "Feburary"\cf0\par
+            \cf1 Case\cf0  3\par
+                Ans2 = \cf3 "March"\cf0\par
+            \cf1 Case\cf0  4\par
+                Ans2 = \cf3 "April"\cf0\par
+            \cf1 Case\cf0  5\par
+                Ans2 = \cf3 "May"\cf0\par
+            \cf1 Case\cf0  6\par
+                Ans2 = \cf3 "june"\cf0\par
+            \cf1 Case\cf0  7\par
+                Ans2 = \cf3 "july"\cf0\par
+            \cf1 Case\cf0  8\par
+                Ans2 = \cf3 "August"\cf0\par
+            \cf1 Case\cf0  9\par
+                Ans2 = \cf3 "september"\cf0\par
+            \cf1 Case\cf0  10\par
+                Ans2 = \cf3 "October"\cf0\par
+            \cf1 Case\cf0  11\par
+                Ans2 = \cf3 "november"\cf0\par
+            \cf1 Case\cf0  12\par
+                Ans2 = \cf3 "december"\cf0\par
+            \cf1 Case Else\cf0\par
+                Ans2 = \cf3 "Not a valid month "\cf0\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 " please enter the year"\cf0 )\par
+        _year = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  _year\par
+            \cf1 Case\cf0  0 \cf1 To\cf0  9\par
+                Ans3 = (\cf3 "200"\cf0  & _year)\par
+            \cf1 Case\cf0  10 \cf1 To\cf0  30\par
+                Ans3 = (\cf3 "20"\cf0  & _year)\par
+            \cf1 Case\cf0  31 \cf1 To\cf0  99\par
+                Ans3 = (\cf3 "19"\cf0  & _year)\par
+            \cf1 Case Else\cf0\par
+                Ans3 = \cf3 "Not a valid year"\cf0\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .Write(Ans1)\par
+        \cf2 Console\cf0 .Write(Ans2)\par
+        \cf2 Console\cf0 .WriteLine(Ans3)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f1\fs24 Q10)Write a program that accepts a date as three separate integers such as 12 5 03 and then\par
+\pard\sa200\sl276\slmult1 calculate is this is a valid date or not.\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  date1, month1, year1 \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter date"\cf0 )\par
+        date1 = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  date1\par
+            \cf1 Case\cf0  0 \cf1 To\cf0  31\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "please enter month"\cf0 )\par
+                month1 = \cf2 Console\cf0 .ReadLine()\par
+                \cf1 Select\cf0  \cf1 Case\cf0  month1\par
+                    \cf1 Case\cf0  1 \cf1 To\cf0  12\par
+                        \cf2 Console\cf0 .WriteLine(\cf3 "please enter the year"\cf0 )\par
+                        year1 = \cf2 Console\cf0 .ReadLine()\par
+                        \cf1 Select\cf0  \cf1 Case\cf0  year1\par
+                            \cf1 Case\cf0  0 \cf1 To\cf0  99\par
+                                \cf2 Console\cf0 .WriteLine(\cf3 "the date is valid!"\cf0 )\par
+                            \cf1 Case Else\cf0\par
+                                \cf2 Console\cf0 .WriteLine(\cf3 "the date is not valid !"\cf0 )\par
+                        \cf1 End\cf0  \cf1 Select\cf0\par
+                    \cf1 Case Else\cf0\par
+                        \cf2 Console\cf0 .WriteLine(\cf3 "the month is not valid !"\cf0 )\par
+                \cf1 End\cf0  \cf1 Select\cf0\par
+            \cf1 Case Else\cf0\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "The day is not valid"\cf0 )\par
+        \cf1 End\cf0  \cf1 Select\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f1\fs24 Q11)Write a program that displays the word 'Hello' on the screen 4 times on the same line using\par
+\pard\sa200\sl276\slmult1 the for loop.\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  4\par
+            \cf2 Console\cf0 .Write(\cf3 "hello "\cf0 )\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0\lang1033\f1 Q12)Write a program that prompts the user to enter a short message and the number of times it\par
+\pard\sa200\sl276\slmult1 is to be displayed and then displays the message the required number of times\cf1\lang9\f2\par
+\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  message \cf1 As\cf0  \cf1 String\cf0\par
+        \cf1 Dim\cf0  counter \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter a message"\cf0 )\par
+        message = \cf2 Console\cf0 .ReadLine()\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "how many times do you want to display this?"\cf0 )\par
+        counter = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  counter\par
+            \cf2 Console\cf0 .WriteLine(message)\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\cf0\f0\fs24 Q13)\f1 Write a console application to calculate the 8 times table\par
+\f2\fs19  \cf1\f0\fs24 Sub\cf0  Main()\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  10\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "8 *"\cf0  & a & \cf3 "="\cf0  & a * 8)\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0 Q14)\f1 Write a console application that will ask for 10 numbers. The program will then display the\par
+\pard\sa200\sl276\slmult1 sum of these numbers and the average\fs20 .\par
+\cf1\f0\fs24 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  sum, average \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  10\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "enter a number"\cf0 )\par
+            number = \cf2 Console\cf0 .ReadLine()\par
+            sum = sum + number\par
+        \cf1 Next\cf0  a\par
+        average = sum / 10\par
+        \cf2 Console\cf0 .WriteLine(\cf3 " the sum is "\cf0  & sum)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the average is "\cf0  & average)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0 Q15)\f1 Write a program that asks for a number, and displays the squares of all the integers\par
+\pard\sa200\sl276\slmult1 between 1 and this number inclusive.\f0\par
+\f2  \cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  answer \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter a number"\cf0 )\par
+        number = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  number\par
+            answer = a ^ 2\par
+            \cf2 Console\cf0 .WriteLine(answer)\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\par
+\pard\cf0\f0 Q16)\f1 Write a program to display the squares of all the integers from 1 to 12 in two columns\par
+\pard\sa200\sl276\slmult1 headed 'Number' and 'Square of Number'.\par
+\f2\fs19\par
+\f0\fs24     \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  answer \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 " Number  :"\cf0  & \cf3 " Square of a number"\cf0 )\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  12\par
+            answer = a ^ 2\par
+            \cf2 Console\cf0 .WriteLine(a & \cf3 "    :   "\cf0  & answer)\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f0\fs24 Q17)\f1 Write a program that displays all the numbers between 1 and 10,000. How long did it take\par
+\pard\sa200\sl276\slmult1 to execute?\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  10000\par
+            \cf2 Console\cf0 .WriteLine(a)\par
+        \cf1 Next\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f0\fs24 Q18)\f1 Write a program that displays all even numbers between 1 and 10,000. How long did it take\par
+\pard\sa200\sl276\slmult1 to execute?\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 For\cf0  a = 0 \cf1 To\cf0  10000 \cf1 Step\cf0  2\par
+            \cf2 Console\cf0 .WriteLine(a)\par
+        \cf1 Next\cf0\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf0\f1 Q19)Write a console application that will ask for 10 numbers. The program will then display the\par
+max and min value entered (you will need to use an IF statement and variables to hold the\par
+\pard\sa200\sl276\slmult1 max and min values)\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  max, min \cf1 As\cf0  \cf1 Double\cf0\par
+        max = 0\par
+        min = 1000\par
+        \cf1 For\cf0  a = 1 \cf1 To\cf0  10\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "enter a number"\cf0 )\par
+            num = \cf2 Console\cf0 .ReadLine()\par
+            \cf1 If\cf0  num > max \cf1 Then\cf0\par
+                max = num\par
+            \cf1 End\cf0  \cf1 If\cf0\par
+            \cf1 If\cf0  num < min \cf1 Then\cf0\par
+                min = num\par
+            \cf1 End\cf0  \cf1 If\cf0\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the max value is "\cf0  & max)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the min value is "\cf0  & min)\par
+        \cf2 Console\cf0 .ReadKey()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\fs24\par
+\pard\cf0\f0 Q20)\f1 n factorial, usually written n!, is defined to be the product of all the integers in the range 1 to\par
+n:\par
+n! = 1 * 2 * 3 * 4 * \'85\'85.*n\par
+\pard\sa200\sl276\slmult1 Write a program that calculates n! for a given positive n.\par
+\cf1\f0 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  number \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  ans \cf1 As\cf0  \cf1 Integer\cf0  = 1\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "enter a number whose factorial you require"\cf0 )\par
+        number = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 For\cf0  a = number \cf1 To\cf0  1 \cf1 Step\cf0  -1\par
+            ans = ans * a\par
+        \cf1 Next\cf0  a\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "answer is :"\cf0  & ans)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf0\f0\fs24 Q21)\f1 Write a program that asks for a number and converts this into a binary number. You will\par
+\pard\sa200\sl276\slmult1 need to use \\ and mod.\par
+\cf1\f0 Dim\cf0  number, binary \cf1 As\cf0  \cf1 String\cf0\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "Type number"\cf0 )\par
+        number = \cf2 Console\cf0 .ReadLine()\par
+        binary = \cf1 Nothing \cf5 (or "")\cf0\par
+        \cf1 Do\cf0\par
+            binary = binary & (number \cf1 Mod\cf0  2)\par
+            number = number \\ 2\par
+        \cf1 Loop\cf0  \cf1 Until\cf0  number = 0\par
+        \cf2 Console\cf0 .WriteLine(StrReverse(binary))\par
+        \cf2 Console\cf0 .ReadLine()\par
+\f1\par
+\pard\cf6 Q22)\cf0 Write a program that reads in a series of numbers and adds them up until the user enters\par
+zero. (This stopping value is often called a \b rogue value.) \b0 You may assume that at least\par
+1 number is entered.\par
+Expand your program to display the average as well as the sum of the numbers entered.\par
+\pard\sa200\sl276\slmult1 Make sure you do not count the rogue value as an entry.\cf5\par
+\cf0\f0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num, total \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  sum, average \cf1 As\cf0  \cf1 Double\cf0\par
+        sum = 0\par
+        total = 0\par
+        \cf1 Do\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "please enter a number"\cf0 )\par
+            num = \cf2 Console\cf0 .ReadLine()\par
+            sum = sum + num\par
+            total = total + 1\par
+        \cf1 Loop\cf0  \cf1 Until\cf0  num = 0\par
+        total = total - 1\par
+        average = sum / total\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the sum is  "\cf0  & sum)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "total numbers are  "\cf0  & total)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the average is  "\cf0  & average)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\cf0\f2\fs19\par
+\pard\f3\fs24 Q23)Write a program that asks the user for a number between 10 and 20 inclusive and will validate\par
+the input. It should repeatedly ask the user for this number until the input is within the valid range.\par
+Make changes to your program so it will also work if the user does not want to type in any numbers\par
+\pard\sa200\sl276\slmult1 and uses the rogue value straight away.\f2\fs19\par
+\f0\fs24  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  ans \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Do\cf0\par
+            \cf2 Console\cf0 .WriteLine(\cf3 "enter a number"\cf0 )\par
+            num = \cf2 Console\cf0 .ReadLine()\par
+        \cf1 Loop\cf0  \cf1 Until\cf0  ((num <= 20) \cf1 And\cf0  (num >= 10)) \cf1 Or\cf0  (num = 0)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "the answer between 10 and 20 is  : "\cf0  & num)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\cf0\par
+\pard\lang1033\f4 Q24)\f1 Write a program that displays a conversion table for pounds to kilograms, ranging from 1\par
+\pard\sa200\sl276\slmult1 pound to 20 pounds [1 kg = 2.2 pounds].\lang9\f2\fs19\par
+\cf1\f0\fs24 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  kilograms \cf1 As\cf0  \cf1 Double\cf0\par
+        \cf1 Dim\cf0  a \cf1 As\cf0  \cf1 Integer\cf0  = 0\par
+        \cf1 Do\cf0\par
+            a = a + 1\par
+            kilograms = a / 2.2\par
+            \cf2 Console\cf0 .WriteLine(a & \cf3 "       :"\cf0  & (Format(kilograms, \cf3 "###.00"\cf0 )) & \cf3 "kg"\cf0 )\par
+        \cf1 Loop\cf0  \cf1 Until\cf0  (a = 20)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\pard\cf6\f3 Q25)\cf0\f1 Write a program that asks the user to enter 8 integers and displays the largest integer.\par
+Adapt your program so that the user can type in any number of positive integers. Input will\par
+terminate with the rogue value of\emdash l.\par
+Adapt your program so that it will also display the smallest integer.\par
+Adapt your program from if necessary, so that it works if the user types in the rogue value as\par
+\pard\sa200\sl276\slmult1 the first value\par
+\f0  \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  sign \cf1 As\cf0  \cf1 Integer\cf0\par
+        \cf1 Dim\cf0  largest \cf1 As\cf0  \cf1 Integer\cf0  = 0\par
+        \cf1 Dim\cf0  smallest \cf1 As\cf0  \cf1 Integer\cf0  = 1000\par
+        \cf1 Dim\cf0  a \cf1 As\cf0  \cf1 Integer\cf0  = 0\par
+        \cf1 Do\cf0\par
+            \cf1 Do\cf0\par
+                \cf2 Console\cf0 .WriteLine(\cf3 "please enter a poisitive number"\cf0 )\par
+                num = \cf2 Console\cf0 .ReadLine()\par
+                sign = \cf2 Math\cf0 .Sign(num)\par
+            \cf1 Loop\cf0  \cf1 Until\cf0  (sign = 1) \cf1 Or\cf0  (num = 0)\par
+            \cf1 If\cf0  num > largest \cf1 Then\cf0\par
+                largest = num\par
+            \cf1 End\cf0  \cf1 If\cf0\par
+            \cf1 If\cf0  num < smallest \cf1 Then\cf0\par
+                smallest = num\par
+            \cf1 End\cf0  \cf1 If\cf0\par
+            a = a + 1\par
+        \cf1 Loop\cf0  \cf1 Until\cf0  (num = 0) \cf1 Or\cf0  (a = 8)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "largest : "\cf0  & largest)\par
+        \cf2 Console\cf0 .WriteLine(\cf3 "smallest :"\cf0  & smallest)\par
+        \cf2 Console\cf0 .ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\f2\fs19\par
+\pard\cf5\f1\fs24 Q26)Write a game in which the user guesses what random number between 1 and 1000 the\par
+computer has 'thought of, until he or she has found the correct number. The computer\par
+should tell the user whether each guess was too high, too low or spot on. (TIP: use the\par
+\pard\sa200\sl276\slmult1 Maths library, which has a random function. See page 18)\f0\par
+\cf0\par
+}
+ 

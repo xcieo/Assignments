@@ -1,0 +1,401 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue255;\red163\green21\blue21;\red0\green128\blue0;}
+{\*\generator Riched20 10.0.10240}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Q.Type in the above program into a new console application. Then test your program with the\par
+following test data. For each set of test data:\par
+\f1\bullet  state the expected results,\par
+\bullet  run the program with the test data and\par
+\bullet  get a screen shot to show evidence.\par
+Test Data with expected results\par
+\bullet  Grade = 10\par
+\bullet  Expected result = Grade U\par
+\bullet  Grade = 80\par
+\bullet  Expected result = Grade A\par
+\bullet  Grade = 60\par
+\bullet\f0  Expected result = \'85\'85\'85\'85\'85\'85\'85.\f1\par
+\bullet  Grade = 50\par
+\bullet\f0  Expected result = \'85\'85\'85\'85\'85\'85\'85\f1\par
+\bullet  Grade = 110\par
+\bullet\f0  Expected result = \'85\'85\'85\'85\'85\'85\'85\f1\par
+\bullet  Grade = 70\par
+\bullet\f0  Expected result = \'85\'85\'85\'85\'85\'85\'85\f1\par
+\bullet  Grade = 45\par
+\bullet\f0  Expected result = \'85\'85\'85\'85\'85\'85\'85\f1\par
+Amend the grade program to that an error message is displayed if the grade is greater than\par
+100 or less than 0.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  grade \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type grade"\cf0 )\par
+        grade = Console.ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  grade\par
+            \cf1 Case\cf0  \cf1 Is\cf0  > 100\par
+                Console.WriteLine(\cf2 "Error. Incorrect value."\cf0 )\par
+            \cf1 Case\cf0  80 \cf1 To\cf0  100\par
+                Console.WriteLine(\cf2 "Grade : A"\cf0 )\par
+            \cf1 Case\cf0  70 \cf1 To\cf0  80\par
+                Console.WriteLine(\cf2 "Grade : B"\cf0 )\par
+            \cf1 Case\cf0  60 \cf1 To\cf0  70\par
+                Console.WriteLine(\cf2 "Grade : C"\cf0 )\par
+            \cf1 Case\cf0  50 \cf1 To\cf0  60\par
+                Console.WriteLine(\cf2 "Grade : D"\cf0 )\par
+            \cf1 Case\cf0  45 \cf1 To\cf0  50\par
+                Console.WriteLine(\cf2 "Grade : E"\cf0 )\par
+            \cf1 Case\cf0  0 \cf1 To\cf0  45\par
+                Console.WriteLine(\cf2 "Grade : U"\cf0 )\par
+            \cf1 Case\cf0  \cf1 Is\cf0  < 0\par
+                Console.WriteLine(\cf2 "Error. Incorrect value."\cf0 )\par
+        \cf1 End\cf0  \cf1 Select\par
+\cf0 Console.ReadLine()\par
+\cf1\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write a program that will ask for a person\rquote s age and then display a message whether they are old enough to drive or not\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type Age"\cf0 )\par
+        num = Console.ReadLine()\par
+        \cf1 If\cf0  num >= 18 \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "Old enough to drive"\cf0 )\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "Not old enough"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0 Console.ReadLine()\par
+\cf1\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write a program that asks the user to enter two numbers and then displays the largest of the two numbers\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num, num2 \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type number 1"\cf0 )\par
+        num = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type number 2"\cf0 )\par
+        num2 = Console.ReadLine()\par
+        \cf1 If\cf0  num > num2 \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "Biggest number is "\cf0  & num)\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "Biggest number is "\cf0  & num2)\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0 Console.ReadLine()\par
+\cf1\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write a program that checks whether a number input is within the range 21 to 29 inclusive and then displays an appropriate massage.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type number 1"\cf0 )\par
+        num = Console.ReadLine()\par
+        \cf1 Select\cf0  \cf1 Case\cf0  num\par
+            \cf1 Case\cf0  21 \cf1 To\cf0  29\par
+                Console.WriteLine(\cf2 "In range"\cf0 )\par
+            \cf1 Case\cf0  \cf1 Is\cf0  < 21\par
+                Console.WriteLine(\cf2 "Below range"\cf0 )\par
+            \cf1 Case\cf0  \cf1 Is\cf0  > 29\par
+                Console.WriteLine(\cf2 "Above range"\cf0 )\par
+        \cf1 End\cf0  \cf1 Select\par
+\cf0 Console.ReadLine()\par
+\cf1\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write a program that asks for three numbers and then displays the largest of the three numbers entered\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num(2) \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type number 1"\cf0 )\par
+        num(0) = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type number 2"\cf0 )\par
+        num(1) = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type number 3"\cf0 )\par
+        num(2) = Console.ReadLine()\par
+        \cf1 If\cf0  num(2) > num(1) \cf1 And\cf0  num(2) > num(0) \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "Largest number is "\cf0  & num(2))\par
+        \cf1 ElseIf\cf0  num(1) > num(2) \cf1 And\cf0  num(1) > num(0) \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "Largest number is "\cf0  & num(1))\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "Largest number is "\cf0  & num(0))\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0 Console.ReadLine()\par
+\cf1\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 #Till Page 32\par
+#Page 69 starts\par
+Q.Write and test a procedure Swap, which takes two integers as parameters and returns the first value passed to the procedure as the second value returned by the procedure and vice versa\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  SWAP(\cf1 ByRef\cf0  a \cf1 As\cf0  \cf1 Double\cf0 , \cf1 ByRef\cf0  b \cf1 As\cf0  \cf1 Double\cf0 )\par
+        \cf1 Dim\cf0  c \cf1 As\cf0  \cf1 Double\par
+\cf0         c = a\par
+        a = b\par
+        b = c\par
+        Console.WriteLine(a)\par
+        Console.WriteLine(b)\par
+    \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num(1) \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type 1st value"\cf0 )\par
+        num(0) = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type 2nd value"\cf0 )\par
+        num(1) = Console.ReadLine()\par
+        Console.WriteLine(\cf2 ""\cf0 )\par
+        SWAP(num(0), num(1))\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write and test a procedure OutputSymbols, which takes two parameters: an integer n and a character symbol. The procedure is to display, on the same line, the symbol n times.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  OutputSymbols(\cf1 ByRef\cf0  a \cf1 As\cf0  \cf1 Char\cf0 , \cf1 ByRef\cf0  b \cf1 As\cf0  \cf1 Double\cf0 )\par
+        \cf1 For\cf0  Count = 1 \cf1 To\cf0  b\par
+            Console.Write(a)\par
+        \cf1 Next\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Dim\cf0  cha \cf1 As\cf0  \cf1 Char\par
+\cf0         Console.WriteLine(\cf2 "Type symbol"\cf0 )\par
+        cha = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type value"\cf0 )\par
+        num = Console.ReadLine()\par
+        Console.WriteLine(\cf2 ""\cf0 )\par
+        OutputSymbols(cha, num)\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write and test a procedure Sort, which takes two integers as parameters and returns them in ascending order.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Sort(\cf1 ByRef\cf0  a \cf1 As\cf0  \cf1 Double\cf0 , \cf1 ByRef\cf0  b \cf1 As\cf0  \cf1 Double\cf0 )\par
+        \cf1 If\cf0  b > a \cf1 Then\par
+\cf0             Console.WriteLine(a)\par
+            Console.WriteLine(b)\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(b)\par
+            Console.WriteLine(a)\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  num, num2 \cf1 As\cf0  \cf1 Double\par
+\cf0         Console.WriteLine(\cf2 "Type value #1"\cf0 )\par
+        num = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Type value #2"\cf0 )\par
+        num2 = Console.ReadLine()\par
+        Console.WriteLine(\cf2 ""\cf0 )\par
+        Sort(num, num2)\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.Write a program to let the computer guess a number the user has thought of, within a range specified by you as the programmer.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf3 'number range 1 - 10\par
+\cf0         \cf1 Dim\cf0  num, num2 \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Dim\cf0  rnd \cf1 As\cf0  \cf1 New\cf0  Random\par
+        num = rnd.Next(0, 11)\par
+        Console.WriteLine(\cf2 "Type a number from 1 - 10"\cf0 )\par
+        num2 = Console.ReadLine()\par
+        \cf1 If\cf0  num = num2 \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "Computer wins! Correct guess"\cf0 )\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "You win. Computer guessed wrong"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0         Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q.The game 'Last one loses' is played by two players and uses a pile of n counters. Players take turns at removing 1, 2 or 3 counters from the pile. The game continues until there are no counters left and the winner is the one who does not take the last counter. Using procedures, write a program to allow the user to specify n in the range 10 \f1\emdash  50 inclusive and act as one player, playing at random until fewer than 5 counters remain. Try playing against your program, and then playing to win.\par
+\cf1\f2\fs16\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf3 'The player can play solo/alone till the counter reaches less than 5. After that computer selects a random card\par
+\cf0         \cf3 'between 1-3 depending on how many are left. Error handling is done for Foul moves.\par
+\cf0         \cf1 Dim\cf0  num, num2, cmp \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Dim\cf0  rnd \cf1 As\cf0  \cf1 New\cf0  Random\par
+        Console.WriteLine(\cf2 "Type counter range from 10 to 50 inclusive"\cf0 )\par
+        num = Console.ReadLine()\par
+        Console.WriteLine(\cf2 "Current counter range left is "\cf0  & num)\par
+        \cf1 If\cf0  num >= 10 \cf1 And\cf0  num <= 50 \cf1 Then\par
+\cf0             \cf1 Do\par
+\cf0                 Console.WriteLine(\cf2 "Would you like to remove. 1 , 2 or 3 counters from pile/counter range"\cf0 )\par
+                num2 = Console.ReadLine()\par
+                \cf1 If\cf0  num2 = 1 \cf1 Or\cf0  num2 = 2 \cf1 Or\cf0  num2 = 3 \cf1 Then\par
+\cf0                     num = num - num2\par
+                    Console.WriteLine(\cf2 "Current counter range left is "\cf0  & num)\par
+                    \cf1 If\cf0  num < 5 \cf1 Then\par
+\cf0                         \cf1 Select\cf0  \cf1 Case\cf0  num\par
+                            \cf1 Case\cf0  4\par
+                                cmp = rnd.Next(1, 4)\par
+                            \cf1 Case\cf0  3\par
+                                cmp = rnd.Next(1, 3)\par
+                            \cf1 Case\cf0  2\par
+                                cmp = rnd.Next(1, 2)\par
+                            \cf1 Case\cf0  1\par
+                                cmp = 1\par
+                        \cf1 End\cf0  \cf1 Select\par
+\cf0                         Console.WriteLine(\cf2 "Computer chooses the number "\cf0  & cmp)\par
+                        num = num - cmp\par
+                        Console.WriteLine(\cf2 "Current counter range left is "\cf0  & num)\par
+                    \cf1 End\cf0  \cf1 If\par
+\cf0                 \cf1 Else\par
+\cf0                     Console.WriteLine(\cf2 "Incorrect value. Please use any value from 1 - 3. Press Enter to re enter the value"\cf0 )\par
+                    Console.ReadLine()\par
+                \cf1 End\cf0  \cf1 If\par
+\cf0             \cf1 Loop\cf0  \cf1 Until\cf0  num <= 0\par
+            Console.WriteLine(\cf2 "Game Over"\cf0 )\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "Incorrect value. Please use a value between 10 to 15 inclusive"\cf0 )\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0         Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Create a procedure GetLotteryNumbers that will supply 6 unique random numbers\par
+between 1 and 49\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  GetLotteryNumbers()\par
+        \cf1 Dim\cf0  numbers(6) \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Dim\cf0  rnd \cf1 As\cf0  \cf1 New\cf0  Random()\par
+        \cf1 Dim\cf0  random \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 For\cf0  count = 1 \cf1 To\cf0  6\par
+            \cf1 Do\par
+\cf0                 random = rnd.Next(1, 50)\par
+            \cf1 Loop\cf0  \cf1 Until\cf0  random <> numbers(1) \cf1 And\cf0  random <> numbers(2) \cf1 And\cf0  random <> numbers(3) \cf1 And\cf0  random <> numbers(4) \cf1 And\cf0  random <> numbers(5) \cf1 And\cf0  random <> numbers(6)\par
+            numbers(count) = random\par
+        \cf1 Next\par
+\cf0         \cf1 For\cf0  count = 1 \cf1 To\cf0  6\par
+            Console.WriteLine(numbers(count))\par
+        \cf1 Next\par
+\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  Main()\par
+        GetLotteryNumbers()\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a palindrome tester. A palindrome is a word or sentence that reads the same backwards as forwards. The user should enter a string and the program should display whether the string is a palindrome or not.\f2\fs20\lang1033\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  CheckPalindrome(\cf1 ByRef\cf0  strString \cf1 As\cf0  \cf1 String\cf0 )\par
+        \cf1 Dim\cf0  str \cf1 As\cf0  \cf1 String\par
+\cf0         str = StrReverse(strString)\par
+        \cf1 If\cf0  str.Equals(strString) \cf1 Then\par
+\cf0             Console.WriteLine(\cf2 "This string is Palindrome."\cf0 )\par
+        \cf1 Else\par
+\cf0             Console.WriteLine(\cf2 "This string is not Palindrome."\cf0 )\par
+        \cf1 End\cf0  \cf1 If\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  stringg \cf1 As\cf0  \cf1 String\par
+\cf0         Console.WriteLine(\cf2 "Type string"\cf0 )\par
+        stringg = Console.ReadLine()\par
+        CheckPalindrome(stringg)\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that asks the user to enter a sentence, terminated by a full stop and the pressing of the Enter key. The program should count the number of words and display the result.\f2\fs20\lang1033\par
+\cf1 Imports\cf0  System.Text.RegularExpressions\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  s \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Dim\cf0  sentence \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Dim\cf0  count \cf1 As\cf0  \cf1 Integer\cf0  = 0\par
+        Console.WriteLine(\cf2 "Type sentence"\cf0 )\par
+        sentence = Console.ReadLine()\par
+        \cf1 Dim\cf0  arr \cf1 As\cf0  \cf1 String\cf0 () = SplitWords(sentence)\par
+        \cf1 For\cf0  \cf1 Each\cf0  s \cf1 In\cf0  arr\par
+            count = count + 1\par
+        \cf1 Next\par
+\cf0         Console.WriteLine(\cf2 "There is a total of "\cf0  & count & \cf2 " words in this sentence"\cf0 )\par
+        Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Private\cf0  \cf1 Function\cf0  SplitWords(\cf1 ByRef\cf0  s \cf1 As\cf0  \cf1 String\cf0 ) \cf1 As\cf0  \cf1 String\cf0 ()\par
+        \cf1 Return\cf0  Regex.Split(s, \cf2 "\\W+"\cf0 )\par
+    \cf1 End\cf0  \cf1 Function\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that asks the user for a word, and then displays the ASCII code for each letter in the word.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  word \cf1 As\cf0  \cf1 String\par
+\cf0         Console.WriteLine(\cf2 "Type word"\cf0 )\par
+        word = Console.ReadLine()\par
+        \cf1 Dim\cf0  charArray() \cf1 As\cf0  \cf1 Char\cf0  = word.ToCharArray\par
+        \cf1 For\cf0  \cf1 Each\cf0  item \cf1 As\cf0  \cf1 Char\cf0  \cf1 In\cf0  charArray\par
+            Console.WriteLine(item & \cf2 " = "\cf0  & Asc(item))\par
+        \cf1 Next\par
+\cf0         Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that takes two letters as input and displays all the letters of the alphabet between the two supplied letters (inclusive). For example, EJ produces EFGHIJ. The letters are to be printed in the order in which the specified letters are supplied. GB should produce GFEDCB.\par
+\cf1\f2\fs20\lang1033 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  l1, l2 \cf1 As\cf0  \cf1 Char\par
+\cf0         \cf1 Dim\cf0  asc1, asc2, difference \cf1 As\cf0  \cf1 Integer\par
+\cf0         Console.WriteLine(\cf2 "Input First Alphabet"\cf0 )\par
+        l1 = Console.ReadLine()\par
+        l1 = UCase(l1)\par
+        Console.WriteLine(\cf2 "Input Second Alphabet"\cf0 )\par
+        l2 = Console.ReadLine()\par
+        l2 = UCase(l2)\par
+        asc1 = Asc(l1)\par
+        asc2 = Asc(l2)\par
+        \cf1 If\cf0  asc2 > asc1 \cf1 Then\par
+\cf0             difference = asc2 - asc1\par
+            \cf1 For\cf0  count = 0 \cf1 To\cf0  difference\par
+                Console.Write(Chr(asc1 + count))\par
+            \cf1 Next\par
+\cf0         \cf1 Else\par
+\cf0             difference = asc1 - asc2\par
+            \cf1 For\cf0  count = 0 \cf1 To\cf0  difference\par
+                Console.Write(Chr(asc1 - count))\par
+            \cf1 Next\par
+\cf0         \cf1 End\cf0  \cf1 If\par
+\cf0         Console.ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that reads in a date, converts it into date format, adds a day and displays the next day's date.\par
+\cf1\f2\fs20\lang1033 Imports\cf0  System.Console\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  Today, tomorrow \cf1 As\cf0  \cf1 Date\par
+\cf0         Today = Now()\par
+        WriteLine(\cf2 "Date format is like this = "\cf0  & Today)\par
+        Console.WriteLine()\par
+        Console.WriteLine(\cf2 "Type in a date"\cf0 )\par
+        Today = Console.ReadLine()\par
+        WriteLine(\cf2 "Date: "\cf0  & Format(Today, \cf2 "dd/mm/yy"\cf0 ))\par
+        tomorrow = Today.AddDays(1)\par
+        WriteLine(\cf2 "tomorrow's date: "\cf0  & Format(tomorrow, \cf2 "dd/mm/yy"\cf0 ))\par
+        ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that displays today's date and formats the output appropriatly.\par
+\cf1\f2\fs20\lang1033 Imports\cf0  System.Console\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  Today \cf1 As\cf0  \cf1 Date\par
+\cf0         Today = Now()\par
+        WriteLine(\cf2 "Date: "\cf0  & Format(Today, \cf2 "dd/mm/yy"\cf0 ))\par
+        ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that asks the user for their surname and displays the surname in uppercase letters.\par
+\cf1\f2\fs20\lang1033 Imports\cf0  System.Console\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  surname \cf1 As\cf0  \cf1 String\par
+\cf0         WriteLine(\cf2 "Type surname"\cf0 )\par
+        surname = ReadLine()\par
+        WriteLine(UCase(surname))\par
+        ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+\cf0\f0\fs22\lang9 Q. Write a program that asks the user to type in a number with decimal places. The program should then display the rounded and the truncated number.\par
+\cf1\f2\fs20\lang1033 Imports\cf0  System.Console\par
+\cf1 Module\cf0  Module1\par
+    \cf1 Sub\cf0  Main()\par
+        \cf1 Dim\cf0  dec \cf1 As\cf0  \cf1 Double\par
+\cf0         WriteLine(\cf2 "Type decimal number"\cf0 )\par
+        dec = ReadLine()\par
+        WriteLine(Math.Round(dec))\par
+        WriteLine(Math.Truncate(dec))\par
+        ReadLine()\par
+    \cf1 End\cf0  \cf1 Sub\par
+End\cf0  \cf1 Module\par
+}
+ 
